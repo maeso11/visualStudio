@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>inicio</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!--Ejemplo Interpolation-->
+  <p><ion-input value="{{name}}">{{ name }} </ion-input></p>
+  <p><a [href]="url">Prueba property binding</a></p>
+  <p><a href = "{{url}}">Prueba property binding 2</a></p>
+
+  <p><input disabled type="text" value="Hola"></p>
+  <p><input disabled="false" type="text" value="Hola"></p>
+  <p><input disabled="{{activo}}" type="text" value="Hola"></p>
+
+ <!--Ejemplo Property Binding-->
+  <p><input [disabled]="false" type="text" value="hola"></p>
+  <p><input [disabled]="activo" type="text" value="hola"></p>
+  <p><input bin-disabled="activo" type="text" value="hola"></p>
+
+  <!--Ejemplo Two Way Binding-->
+  <p><input [(ngModel)]="poblacion" type="text">{{poblacion}}</p>
+  <p><input [ngModel]="codigoPostal" type="text">{{codigoPostal}}</p>
+  <ion-button routerLink="/lista.page.html">Lista</ion-button>
+</ion-content>
